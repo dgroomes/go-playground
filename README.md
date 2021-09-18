@@ -44,6 +44,16 @@ and the Go community.
   conventions. Should I make `~/repos/go/personal`
   and `~/repos/go/opensource`? Or should I symlink repos from `~/repos/go` into my conventional `~/repos/personal`
   and `~/repos/opensource`?
+* I don't have to declare variables with a `var` keyword? That's pretty cool. Note that you need `var` I think only whe
+  you don't assign the variable in the same statement.
+* The code samples in the docs at <pkg.go.dev> is amazing. Wow! You can even edit and run the code samples right there!
+
+### Wish list
+
+General clean ups, TODOs and things I wish to implement for this project:
+
+* DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
+  better contrast and proves that the program actually does something with JSON.
 
 ## Reference
 
@@ -51,3 +61,5 @@ and the Go community.
     * What do I call this website, the "Go package site"?
 * [Official blog post: *Tidying up the Go web experience*](https://go.dev/blog/tidy-web)
     * The marketing for Go is great! I wish Java had something similar.
+* [The `fmt` package docs](https://pkg.go.dev/fmt)
+    * Read this to understand the format verbs like `%s` and `%q`.  
