@@ -28,14 +28,22 @@ These are my observations about Go the programming language, the surrounding too
 and the Go community.
 
 * It's really cool that you can add an import statement and then do `go mod tidy` to add the module as a requirement.
-  That's an interesting inversion.
+  That's an interesting inversion. Normally (in environments like Java) it's up to you to find the dependency and add it
+  to the project model file (`build.gradle` for Gradle, `pom.xml` for Maven).
 * I like the omission of commas in the import statement. When the compiler can just as easily make sense of a grammar
   without commas, in a certain context, then why require commas? Bash is comma-less, for example! I bet it's hard on the
   compiler and the IDE and will result in harder to read compiler error messages.
 * GoLand doesn't have an [intention action](https://www.jetbrains.com/help/idea/intention-actions.html) for converting a
   string to a raw string. I'm not sure why. Do raw strings work much differently than raw/multiline strings in other
   languages? I use this all the time in Intellij on Kotlin and JavaScript code.
-* I really like that I can name a local variable `_` so that the Go compiler won't complain about an unused variable.  
+* I really like that I can name a local variable `_` so that the Go compiler won't complain about an unused variable.
+* I'm not a huge fan of having a `GOPATH`. This makes me put all my Go projects in a specific directory (on
+  the `GOPATH`). In my case, it's at `~/repos/go` but what I prefer is to put my repos in `~/repos/personal`
+  or `~/repos/opensource`. This is a convention that I use to great effect and I take with me as I use different
+  computers. The Go toolchain however is forcing its own directory constraint on me. So now I have to invent new
+  conventions. Should I make `~/repos/go/personal`
+  and `~/repos/go/opensource`? Or should I symlink repos from `~/repos/go` into my conventional `~/repos/personal`
+  and `~/repos/opensource`?
 
 ## Reference
 
