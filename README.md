@@ -24,7 +24,9 @@ These are the components I'm using to guide my learning:
     * Make sure to enable Go modules integration in GoLand. See the below screenshot for the setting:
       ![goland-enable-go-modules.png](goland-enable-go-modules.png)
 * [ ] [Official Go docs: *Tutorial: Get started with Go*](https://golang.org/doc/tutorial/getting-started)
-    * IN PROGRESS
+    * [x] DONE [*Tutorial: Get started with Go*](https://go.dev/doc/tutorial/getting-started)
+    * [ ] IN PROGRESS [*Tutorial: Create a Go module*](https://go.dev/doc/tutorial/create-module)
+      * > Go code is grouped into packages, and packages are grouped into modules. Your module specifies dependencies needed to run your code, including the Go version and the set of other modules it requires. 
 * [ ] [Official Go docs: *
   Packages The Project Help Blog Play How to Write Go Code (with GOPATH)*](https://golang.org/doc/gopath_code)
 
