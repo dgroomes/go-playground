@@ -2,10 +2,16 @@
 
 📚 Learning and experimenting with the [Go programming language](https://golang.org/).
 
+
 ## Instructions
 
-* Build and run a "Hello world" Go program:
-    * `go run .`
+Follow these instructions to build and run a "Hello world" Go program:
+
+1. Build and run the program:
+   * ```shell
+     go run .
+     ```
+
 
 ## Learning Strategy
 
@@ -21,6 +27,7 @@ These are the components I'm using to guide my learning:
     * IN PROGRESS
 * [ ] [Official Go docs: *
   Packages The Project Help Blog Play How to Write Go Code (with GOPATH)*](https://golang.org/doc/gopath_code)
+
 
 ## Observations about Go
 
@@ -46,14 +53,17 @@ and the Go community.
   and `~/repos/opensource`?
 * I don't have to declare variables with a `var` keyword? That's pretty cool. Note that you need `var` I think only whe
   you don't assign the variable in the same statement.
-* The code samples in the docs at <pkg.go.dev> is amazing. Wow! You can even edit and run the code samples right there!
+* The code samples in the docs at <https://pkg.go.dev> is amazing. Wow! You can even edit and run the code samples right there!
 
-### Wish list
+
+## Wish list
 
 General clean ups, TODOs and things I wish to implement for this project:
 
-* DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
+* [x] DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
   better contrast and proves that the program actually does something with JSON.
+* [ ] Figure out how to modularize Go code. I often struggle with the GOPATH.
+
 
 ## Reference
 
