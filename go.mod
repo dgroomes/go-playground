@@ -1,4 +1,4 @@
-module example/hello
+module github.com/dgroomes/go-playground
 
 go 1.18
 
