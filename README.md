@@ -25,8 +25,13 @@ These are the components I'm using to guide my learning:
       ![goland-enable-go-modules.png](goland-enable-go-modules.png)
 * [ ] [Official Go docs: *Tutorial: Get started with Go*](https://golang.org/doc/tutorial/getting-started)
     * [x] DONE [*Tutorial: Get started with Go*](https://go.dev/doc/tutorial/getting-started)
-    * [ ] IN PROGRESS [*Tutorial: Create a Go module*](https://go.dev/doc/tutorial/create-module)
+    * [x] DONE [*Tutorial: Create a Go module*](https://go.dev/doc/tutorial/create-module)
       * > Go code is grouped into packages, and packages are grouped into modules. Your module specifies dependencies needed to run your code, including the Go version and the set of other modules it requires. 
+      * I haven't yet grokked what it means for a Go project (module) to *track* a dependency. Specifically, when you
+        run `go mod tidy` in the greeting/hello example and it adds `require example.com/greetings v0.0.0-00010101000000-000000000000`
+        to the Go mod file. Is this like the entries you find in a *lock* file? E.g. `package.lock` or `Pipefile.lock`?
+        I appreciate that Go is using a word ("tracked") for this concept. UPDATE: well wait but the word `require` is in
+        the mix too... UPDATE 2: And no it's not like a lock file because there is no hash (fingerprinting).
 * [ ] [Official Go docs: *
   Packages The Project Help Blog Play How to Write Go Code (with GOPATH)*](https://golang.org/doc/gopath_code)
 
