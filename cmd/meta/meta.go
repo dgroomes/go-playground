@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Println(`
-Here is another one of my earliest Go programs. It explores metadata and introspection stuff.`, "\n")
+Here is another one of my earliest Go programs. It explores metadata stuff like the runtime. It's a work in progress'`, "\n")
 
 	_, file, _, _ := runtime.Caller(0)
 	rootDir := filepath.Dir(file)
