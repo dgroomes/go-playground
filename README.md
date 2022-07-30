@@ -7,11 +7,14 @@
 
 Follow these instructions to build and run a "Hello world" Go program:
 
-1. Build and run the program:
+1. Build and run the "hello world" program:
    * ```shell
-     go run .
+     go run hello.go
      ```
-
+1. Build and run the "meta" program:
+   * ```shell
+     go run meta.go
+     ```
 
 ## Learning Strategy
 
@@ -70,6 +73,9 @@ General clean ups, TODOs and things I wish to implement for this project:
 * [x] DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
   better contrast and proves that the program actually does something with JSON.
 * [ ] Figure out how to modularize Go code. I often struggle with the GOPATH.
+* [ ] IN PROGRESS I want a second `main` function because I want a second runnable demo program. If I create a file in the root
+  directory and it defines a `main` function, then when I do `go run .` it will complain about "can't redefine main".
+  What are my options? Is there an idiomatic thing to do?
 
 
 ## Reference
