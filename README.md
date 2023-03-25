@@ -11,9 +11,13 @@ Follow these instructions to build and run a "Hello world" Go program:
    * ```shell
      go run .
      ```
-1. Build and run the "meta" program:
+2. Build and run the "meta" program:
    * ```shell
      go run cmd/meta/meta.go
+     ```
+3. Build and run the "file" program:
+   * ```shell
+     go run cmd/file/file.go
      ```
 
 ## Learning Strategy
@@ -35,8 +39,7 @@ These are the components I'm using to guide my learning:
         to the Go mod file. Is this like the entries you find in a *lock* file? E.g. `package.lock` or `Pipefile.lock`?
         I appreciate that Go is using a word ("tracked") for this concept. UPDATE: well wait but the word `require` is in
         the mix too... UPDATE 2: And no it's not like a lock file because there is no hash (fingerprinting).
-* [ ] [Official Go docs: *
-  Packages The Project Help Blog Play How to Write Go Code (with GOPATH)*](https://golang.org/doc/gopath_code)
+* [ ] [Official Go docs: *Packages The Project Help Blog Play How to Write Go Code (with GOPATH)*](https://golang.org/doc/gopath_code)
 
 
 ## Observations about Go
@@ -72,10 +75,13 @@ General clean ups, TODOs and things I wish to implement for this project:
 
 * [x] DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
   better contrast and proves that the program actually does something with JSON.
-* [ ] Figure out how to modularize Go code. I often struggle with the GOPATH.
+* [ ] Figure out how to modularize Go code. I often struggle with the GOPATH. UPDATE: Go 1.18 added support for "workspaces"
+  which allows you to work with "multi-module workspaces". This is generally the design paradigm that I'm used to in my
+  projects in other languages. Read [the official tutorial on workspaces](https://go.dev/doc/tutorial/workspaces).
 * [x] DONE (`cmd/` is the popular convention) I want a second `main` function because I want a second runnable demo program. If I create a file in the root
   directory and it defines a `main` function, then when I do `go run .` it will complain about "can't redefine main".
   What are my options? Is there an idiomatic thing to do?
+* [ ] Exec an external process.
 
 
 ## Reference
