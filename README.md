@@ -19,6 +19,24 @@ Follow these instructions to build and run a "Hello world" Go program:
    * ```shell
      go run cmd/file/file.go
      ```
+4. Build and run the "exec" program:
+  * ```shell
+     go run cmd/exec/exec.go
+     ```
+  * It should output something like the following.
+  * ```text
+    The 'ls' command found the following files in the current working directory:
+    README.md
+    cmd
+    go.mod
+    go.sum
+    goland-enable-go-modules.png
+    hello.go
+    
+    The 'docker' command reports the following version:
+    20.10.23
+    ```
+
 
 ## Learning Strategy
 
@@ -81,7 +99,7 @@ General clean ups, TODOs and things I wish to implement for this project:
 * [x] DONE (`cmd/` is the popular convention) I want a second `main` function because I want a second runnable demo program. If I create a file in the root
   directory and it defines a `main` function, then when I do `go run .` it will complain about "can't redefine main".
   What are my options? Is there an idiomatic thing to do?
-* [ ] Exec an external process.
+* [x] DONE Exec an external process.
 
 
 ## Reference
