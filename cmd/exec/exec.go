@@ -45,7 +45,7 @@ func execDocker() {
 
 	output, err := exec.Command("docker", "version", "-f", "{{.Server.Version}}").Output()
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("There was an error. Is the Docker daemon running? We are trying to check the version of the Docker daemon (server) and so it needs to be running.", err)
 	}
 
 	fmt.Println("The 'docker' command reports the following version:")

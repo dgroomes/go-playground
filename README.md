@@ -20,22 +20,22 @@ Follow these instructions to build and run a "Hello world" Go program:
      go run cmd/file/file.go
      ```
 4. Build and run the "exec" program:
-  * ```shell
+   * ```shell
      go run cmd/exec/exec.go
      ```
-  * It should output something like the following.
-  * ```text
-    The 'ls' command found the following files in the current working directory:
-    README.md
-    cmd
-    go.mod
-    go.sum
-    goland-enable-go-modules.png
-    hello.go
-    
-    The 'docker' command reports the following version:
-    20.10.23
-    ```
+   * It should output something like the following.
+   * ```text
+     The 'ls' command found the following files in the current working directory:
+     README.md
+     cmd
+     go.mod
+     go.sum
+     goland-enable-go-modules.png
+     hello.go
+     
+     The 'docker' command reports the following version:
+     20.10.23
+     ```
 
 
 ## Learning Strategy
