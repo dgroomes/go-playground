@@ -19,9 +19,9 @@ Follow these instructions to build and run a "Hello world" Go program:
    * ```shell
      go run cmd/file/file.go
      ```
-4. Build and run the "exec" program:
+4. Build and run the "exec-subprocess" program:
    * ```shell
-     go run cmd/exec/exec.go
+     go run cmd/exec-subprocess/exec-subprocess.go
      ```
    * It should output something like the following.
    * ```text
@@ -34,8 +34,23 @@ Follow these instructions to build and run a "Hello world" Go program:
      hello.go
      
      The 'docker' command reports the following version:
-     20.10.23
+     26.0.0
      ```
+5. Build and run the "exec-process-image-replacement" program:
+    * ```shell
+      go run cmd/exec-process-image-replacement/exec-process-image-replacement.go
+      ```
+    * It should output something like the following.
+    * ```text
+      Hello from a Go program. This process will be 'morphed' from a Go program into an execution of the 'ls' program. The process stays the same, but we can consider that 'image' (memory) is replaced.
+      total 128
+      -rw-r--r--@ 1 dave  staff   6.4K Jun  3 20:04 README.md
+      drwxr-xr-x@ 6 dave  staff   192B Jun  3 19:56 cmd
+      -rw-r--r--@ 1 dave  staff   167B May 26  2023 go.mod
+      -rw-r--r--@ 1 dave  staff   632B May 26  2023 go.sum
+      -rw-r--r--@ 1 dave  staff    41K May 26  2023 goland-enable-go-modules.png
+      -rw-r--r--@ 1 dave  staff   932B May 26  2023 hello.go
+      ```
 
 
 ## Learning Strategy
@@ -89,7 +104,7 @@ and the Go community.
 
 ## Wish list
 
-General clean ups, TODOs and things I wish to implement for this project:
+General clean-ups, TODOs and things I wish to implement for this project:
 
 * [x] DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
   better contrast and proves that the program actually does something with JSON.
@@ -97,7 +112,7 @@ General clean ups, TODOs and things I wish to implement for this project:
   which allows you to work with "multi-module workspaces". This is generally the design paradigm that I'm used to in my
   projects in other languages. Read [the official tutorial on workspaces](https://go.dev/doc/tutorial/workspaces).
 * [x] DONE (`cmd/` is the popular convention) I want a second `main` function because I want a second runnable demo program. If I create a file in the root
-  directory and it defines a `main` function, then when I do `go run .` it will complain about "can't redefine main".
+  directory, and it defines a `main` function, then when I do `go run .` it will complain about "can't redefine main".
   What are my options? Is there an idiomatic thing to do?
 * [x] DONE Exec an external process.
 
