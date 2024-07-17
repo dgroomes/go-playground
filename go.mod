@@ -1,6 +1,6 @@
 module github.com/dgroomes/go-playground
 
-go 1.18
+go 1.22
 
 require rsc.io/quote v1.5.2
 
