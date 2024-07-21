@@ -3,54 +3,28 @@
 📚 Learning and experimenting with the [Go programming language](https://golang.org/).
 
 
-## Instructions
+## Standalone subprojects
 
-Follow these instructions to build and run a "Hello world" Go program:
+This repository illustrates different concepts, patterns and examples via standalone subprojects. Each subproject is
+completely independent of the others and do not depend on the root project. This _standalone subproject constraint_
+forces the subprojects to be complete and maximizes the reader's chances of successfully running, understanding, and
+re-using the code.
 
-1. Build and run the "hello world" program:
-   * ```shell
-     go run .
-     ```
-2. Build and run the "meta" program:
-   * ```shell
-     go run cmd/meta/meta.go
-     ```
-3. Build and run the "file" program:
-   * ```shell
-     go run cmd/file/file.go
-     ```
-4. Build and run the "exec-subprocess" program:
-   * ```shell
-     go run cmd/exec-subprocess/exec-subprocess.go
-     ```
-   * It should output something like the following.
-   * ```text
-     The 'ls' command found the following files in the current working directory:
-     README.md
-     cmd
-     go.mod
-     go.sum
-     goland-enable-go-modules.png
-     hello.go
-     
-     The 'docker' command reports the following version:
-     26.0.0
-     ```
-5. Build and run the "exec-process-image-replacement" program:
-    * ```shell
-      go run cmd/exec-process-image-replacement/exec-process-image-replacement.go
-      ```
-    * It should output something like the following.
-    * ```text
-      Hello from a Go program. This process will be 'morphed' from a Go program into an execution of the 'ls' program. The process stays the same, but we can consider that 'image' (memory) is replaced.
-      total 128
-      -rw-r--r--@ 1 dave  staff   6.4K Jun  3 20:04 README.md
-      drwxr-xr-x@ 6 dave  staff   192B Jun  3 19:56 cmd
-      -rw-r--r--@ 1 dave  staff   167B May 26  2023 go.mod
-      -rw-r--r--@ 1 dave  staff   632B May 26  2023 go.sum
-      -rw-r--r--@ 1 dave  staff    41K May 26  2023 goland-enable-go-modules.png
-      -rw-r--r--@ 1 dave  staff   932B May 26  2023 hello.go
-      ```
+The subprojects include:
+
+
+### `hello/`
+
+A "hello world" Go program.
+
+See the README in [hello/](hello/).
+
+
+### `misc/`
+
+Exploring miscellaneous features and concepts of Go.
+
+See the README in [misc/](misc/).
 
 
 ## Learning Strategy
@@ -72,7 +46,7 @@ These are the components I'm using to guide my learning:
         to the Go mod file. Is this like the entries you find in a *lock* file? E.g. `package.lock` or `Pipefile.lock`?
         I appreciate that Go is using a word ("tracked") for this concept. UPDATE: well wait but the word `require` is in
         the mix too... UPDATE 2: And no it's not like a lock file because there is no hash (fingerprinting).
-* [ ] [Official Go docs: *Packages The Project Help Blog Play How to Write Go Code (with GOPATH)*](https://golang.org/doc/gopath_code)
+* [ ] [Official Go docs: *How to Write Go Code*](https://golang.org/doc/gopath_code)
 
 
 ## Observations about Go
@@ -90,13 +64,6 @@ and the Go community.
   string to a raw string. I'm not sure why. Do raw strings work much differently than raw/multiline strings in other
   languages? I use this all the time in Intellij on Kotlin and JavaScript code.
 * I really like that I can name a local variable `_` so that the Go compiler won't complain about an unused variable.
-* I'm not a huge fan of having a `GOPATH`. This makes me put all my Go projects in a specific directory (on
-  the `GOPATH`). In my case, it's at `~/repos/go` but what I prefer is to put my repos in `~/repos/personal`
-  or `~/repos/opensource`. This is a convention that I use to great effect and I take with me as I use different
-  computers. The Go toolchain however is forcing its own directory constraint on me. So now I have to invent new
-  conventions. Should I make `~/repos/go/personal`
-  and `~/repos/go/opensource`? Or should I symlink repos from `~/repos/go` into my conventional `~/repos/personal`
-  and `~/repos/opensource`?
 * I don't have to declare variables with a `var` keyword? That's pretty cool. Note that you need `var` I think only whe
   you don't assign the variable in the same statement.
 * The code samples in the docs at <https://pkg.go.dev> is amazing. Wow! You can even edit and run the code samples right there!
@@ -108,13 +75,17 @@ General clean-ups, TODOs and things I wish to implement for this project:
 
 * [x] DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
   better contrast and proves that the program actually does something with JSON.
-* [ ] Figure out how to modularize Go code. I often struggle with the GOPATH. UPDATE: Go 1.18 added support for "workspaces"
-  which allows you to work with "multi-module workspaces". This is generally the design paradigm that I'm used to in my
-  projects in other languages. Read [the official tutorial on workspaces](https://go.dev/doc/tutorial/workspaces).
+* [ ] Figure out how to modularize Go code. Go 1.18 added support for "workspaces" which allows you to work
+  with "multi-module workspaces". This is generally the design paradigm that I'm used to in my
+  projects in other languages. Read [the official tutorial on workspaces](https://go.dev/doc/tutorial/workspaces). Say,
+  for example, that I want to build a utility program called `word-count` and another program called `json-formatter`.
+  I don't want the `word-count` program to be polluted with any dependencies that are specific to `json-formatter`. How
+  do I do this?
 * [x] DONE (`cmd/` is the popular convention) I want a second `main` function because I want a second runnable demo program. If I create a file in the root
   directory, and it defines a `main` function, then when I do `go run .` it will complain about "can't redefine main".
   What are my options? Is there an idiomatic thing to do?
 * [x] DONE Exec an external process.
+* [x] DONE Split up into my usual "standalone subprojects" learning repository style.
 
 
 ## Reference
