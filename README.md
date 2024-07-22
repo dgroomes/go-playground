@@ -75,7 +75,7 @@ General clean-ups, TODOs and things I wish to implement for this project:
 
 * [x] DONE Print the JSON document. I'd like to print the JSON string in the program output. This gives
   better contrast and proves that the program actually does something with JSON.
-* [ ] Figure out how to modularize Go code. Go 1.18 added support for "workspaces" which allows you to work
+* [ ] ABANDONED ([see note](https://github.com/dgroomes/go-playground/commit/3a67176e1d0f8fc595b1a1d0fabf7ce8c255e2d9#diff-d5d7f59b593bf8f73452d53db87aed6621370ee86a3568111f10181696d9f54cR3)) Figure out how to modularize Go code. Go 1.18 added support for "workspaces" which allows you to work
   with "multi-module workspaces". This is generally the design paradigm that I'm used to in my
   projects in other languages. Read [the official tutorial on workspaces](https://go.dev/doc/tutorial/workspaces). Say,
   for example, that I want to build a utility program called `word-count` and another program called `json-formatter`.
