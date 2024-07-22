@@ -1,7 +1,0 @@
-go 1.22.5
-
-use (
-	./file-summarizer-cli
-	./file-summarizer-lib
-)
-
